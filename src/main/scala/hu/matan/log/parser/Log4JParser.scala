@@ -3,7 +3,11 @@ package hu.matan.log.parser
 import scala.collection.immutable.List
 import scala.util.parsing.combinator._
 
-object Log4JParser extends JavaTokenParsers {
+/*
+http://www.donroby.com/wp/scala/parsing-expressions-with-scala-parser-combinators-2/
+ */
+
+object Log4JParser extends RegexParsers {
 
   def log4JLine = logLine | exceptionLine | stackTraceLine
 
@@ -15,9 +19,27 @@ object Log4JParser extends JavaTokenParsers {
     case ch ~ ec ~ colon ~ msg => ExceptionLine(ch, ec, msg)
   }
 
-  //  "        [java] \tat org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:80) ~[org.springframework.jdbc_3.0.5.RELEASE.jar:3.0.5.RELEASE]"
+  /**
+   * Example input:
+      <pre>
+      "        [java] \tat org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:80) ~[org.springframework.jdbc_3.0.5.RELEASE.jar:3.0.5.RELEASE]"
+      </pre>
+   * and the output that belongs to the above input:
+      <pre>
+      StackTraceLine(
+          channel = "java",
+          `package` = "org.springframework.jdbc.datasource",
+          `class` = "DataSourceUtils",
+          `method` = "getConnection",
+          file = "DataSourceUtils.java",
+          line = 80,
+          jar = Some("org.springframework.jdbc_3.0.5.RELEASE.jar:3.0.5.RELEASE")
+        )
+      </pre>
+   */
   def stackTraceLine = channel ~ "at" ~ pcm ~ "(" ~ file ~ ":" ~ line ~ ")" ~ opt(jar) ^^ {
-    case ch ~ at ~ pcm ~ openBrace ~ file ~ colon ~ line ~ closeBrace ~ jar => StackTraceLine(ch, pcm.`package`, pcm.`class`, pcm.`method`, file, line, jar)
+    case ch ~ at ~ pcm ~ openBrace ~ file ~ colon ~ line ~ closeBrace ~ jar
+    => StackTraceLine(ch, pcm.`package`, pcm.`class`, pcm.`method`, file, line, jar)
   }
 
 
@@ -32,7 +54,7 @@ object Log4JParser extends JavaTokenParsers {
   def file: Parser[String] = """\w+\.?\w*""".r
 
   def line: Parser[Long] = """\d+""".r ^^ {
-    case num => num.toLong
+    case num: String => num.toLong
   }
 
   def jar: Parser[String] = "~" ~> "[" ~> """[\w\._\:]+""".r <~ "]"
@@ -53,15 +75,14 @@ object Log4JParser extends JavaTokenParsers {
   }
 }
 
+
 case class Pcm(`package`: String, `class`: String, `method`: String)
+
 
 sealed trait Log4JLine
 
 case class LogLine(channel: String, time: String, category: String, rest: String) extends Log4JLine
 
 case class ExceptionLine(channel: String, exceptionClass: String, message: String) extends Log4JLine
-
-
-//StackTraceLine("java", "org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java", 80, Option("org.springframework.jdbc_3.0.5.RELEASE.jar:3.0.5.RELEASE"))
 
 case class StackTraceLine(channel: String, `package`: String, `class`: String, `method`: String, file: String, line: Long, jar: Option[String]) extends Log4JLine
