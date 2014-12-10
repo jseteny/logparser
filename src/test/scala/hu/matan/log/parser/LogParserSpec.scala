@@ -37,10 +37,24 @@ class LogParserSpec extends Specification {
       result must be_===(ExceptionLine(
         channel = "java",
         exceptionClass = "org.springframework.jdbc.CannotGetJdbcConnectionException",
-        message = "Could not get JDBC Connection; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Could not create connection to database server. Attempted reconnect 3 times. Giving up."
+        message = "Could not get JDBC Connection; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Could not create connection to database server. Attempted reconnect 3 times. Giving up.",
+        isCause = false
       ))
     })
 
+  "        [java] Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Could not create connection to database server. Attempted reconnect 3 times. Giving up." should (
+    "be parsed as" in {
+
+      val input = "        [java] Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Could not create connection to database server. Attempted reconnect 3 times. Giving up."
+      val result = Log4JParser.parse(input)
+
+      result must be_===(ExceptionLine(
+        channel = "java",
+        exceptionClass = "com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException",
+        message = "Could not create connection to database server. Attempted reconnect 3 times. Giving up.",
+        isCause = true
+      ))
+    })
 
   "        [java] \tat org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:80) ~[org.springframework.jdbc_3.0.5.RELEASE.jar:3.0.5.RELEASE]" should (
     """be parsed as StackTraceLine(
@@ -57,19 +71,14 @@ class LogParserSpec extends Specification {
       val result = Log4JParser.parse(input)
 
       result must be_===(StackTraceLine(
-          channel = "java",
-          `package` = "org.springframework.jdbc.datasource",
-          `class` = "DataSourceUtils",
-          `method` = "getConnection",
-          file = "DataSourceUtils.java",
-          line = 80,
-          jar = Some("org.springframework.jdbc_3.0.5.RELEASE.jar:3.0.5.RELEASE")
-        ))
+        channel = "java",
+        `package` = "org.springframework.jdbc.datasource",
+        `class` = "DataSourceUtils",
+        `method` = "getConnection",
+        file = "DataSourceUtils.java",
+        line = 80,
+        jar = Some("org.springframework.jdbc_3.0.5.RELEASE.jar:3.0.5.RELEASE")
+      ))
     })
 
-  "        [java] Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Could not create connection to database server. Attempted reconnect 3 times. Giving up." should (
-    "be parsed as" in {
-
-      todo //todo
-    })
 }

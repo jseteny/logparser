@@ -1,1 +1,4 @@
-project/project/target/config-classes/
+/project/project/target/
+/project/target/
+*.class
+*.cache

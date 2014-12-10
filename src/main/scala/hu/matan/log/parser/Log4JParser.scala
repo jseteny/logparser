@@ -15,8 +15,15 @@ object Log4JParser extends RegexParsers {
     case ch ~ ti ~ comma1 ~ ca ~ comma2 ~ rest => LogLine(ch, ti, ca, rest)
   }
 
-  def exceptionLine = channel ~ exceptionClass ~ ": " ~ ".*".r ^^ {
-    case ch ~ ec ~ colon ~ msg => ExceptionLine(ch, ec, msg)
+  /**
+   * Example input:
+   * <pre>
+   * "        [java] Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Could not create connection to database server. Attempted reconnect 3 times. Giving up."
+   * "        [java]            org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Could not create connection to database server. Attempted reconnect 3 times. Giving up."
+   * </pre>
+   */
+  def exceptionLine = channel ~ opt("Caused" ~ "by:") ~ exceptionClass ~ ": " ~ ".*".r ^^ {
+    case ch ~ causedBy ~ ec ~ colon ~ msg => ExceptionLine(ch, ec, msg, causedBy!= None)
   }
 
   /**
@@ -83,6 +90,6 @@ sealed trait Log4JLine
 
 case class LogLine(channel: String, time: String, category: String, rest: String) extends Log4JLine
 
-case class ExceptionLine(channel: String, exceptionClass: String, message: String) extends Log4JLine
+case class ExceptionLine(channel: String, exceptionClass: String, message: String, isCause: Boolean) extends Log4JLine
 
 case class StackTraceLine(channel: String, `package`: String, `class`: String, `method`: String, file: String, line: Long, jar: Option[String]) extends Log4JLine
