@@ -1,0 +1,516 @@
+        [java] 15:13:29, INFO,  , d.c.o.d.internal.DBAssistent - ##################################################################################################################
+        [java] 15:13:29, INFO,  , d.c.o.d.internal.DBAssistent - Processing global schema 'globalschema'.
+        [java] 15:13:29, INFO,  , d.c.o.d.AbstractDatabaseTask - ########################################################################
+        [java] 15:13:29, INFO,  , d.c.o.d.AbstractDatabaseTask - Executing task: CheckProductTask on the global schema
+        [java] 15:13:29, WARN,  , d.c.o.d.internal.CheckProductTask - Not yet implemented.
+        [java] 15:13:29, INFO,  , d.c.o.d.AbstractDatabaseTask - Execution of task CheckProductTask on the global schema took 0 s
+        [java] 15:13:29, INFO,  , d.c.o.d.AbstractDatabaseTask - ########################################################################
+        [java] 15:13:29, INFO,  , d.c.o.d.AbstractDatabaseTask - Executing task: UpdateSchemaFromXMLDefinitionTask on the global schema
+        [java] 15:13:29, INFO,  , d.c.o.d.i.s.UpdateSchemaFromXMLDefinitionTask - Update global schema from XML definition
+        [java] 15:13:29, INFO,  , d.c.o.d.i.s.UpdateSchemaFromXMLDefinitionTask - Executing operation on schema 'globalschema': de.cas.open.dbassistent.operations.ddl.AddTableOperation GGUID: CCF7F6F2032D304A8DF39B6C518C594F Author: CAS Software AG TableName: GlobalActionOrders Columns: GGUID UpdateCount UpdateTimestamp InsertTimestamp WorkerKey Client UserId Config Status ExceptionCode ExceptionMessage
+        [java] 15:13:29, INFO,  , d.c.o.d.i.s.DBOperationExecutorImpl - Executing operation on schema 'globalschema: de.cas.open.dbassistent.operations.ddl.AddTableOperation GGUID: CCF7F6F2032D304A8DF39B6C518C594F Author: CAS Software AG TableName: GlobalActionOrders Columns: GGUID UpdateCount UpdateTimestamp InsertTimestamp WorkerKey Client UserId Config Status ExceptionCode ExceptionMessage
+        [java] 15:13:29, INFO,  , d.c.o.d.i.s.UpdateSchemaFromXMLDefinitionTask - Executing operation on schema 'globalschema': de.cas.open.dbassistent.operations.ddl.AddTableOperation GGUID: E06E0A90FF05314DA2A9F067DA3394C5 Author: CAS Software AG TableName: AuthenticationSupportMap Columns: GGUID AuthType AuthKey AuthValue
+        [java] 15:13:29, INFO,  , d.c.o.d.i.s.DBOperationExecutorImpl - Executing operation on schema 'globalschema: de.cas.open.dbassistent.operations.ddl.AddTableOperation GGUID: E06E0A90FF05314DA2A9F067DA3394C5 Author: CAS Software AG TableName: AuthenticationSupportMap Columns: GGUID AuthType AuthKey AuthValue
+        [java] 15:13:29, INFO,  , d.c.o.d.i.s.UpdateSchemaFromXMLDefinitionTask - Executing operation on schema 'globalschema': de.cas.open.dbassistent.operations.ddl.CombinedDDLOperation GGUID: FC4A6FCDB6A73CB8B215BCF4A4E2C035 Author: CAS Software AG Table: SysColumnsEIM de.cas.open.dbassistent.operations.ddl.partial.AddColumnOperation ColumnName: CustomMandatory de.cas.open.dbassistent.operations.ddl.partial.AddColumnOperation ColumnName: CustomRecommended de.cas.open.dbassistent.operations.ddl.partial.AddColumnOperation ColumnName: AllowedForMassUpdate
+        [java] 15:13:29, INFO,  , d.c.o.d.i.s.DBOperationExecutorImpl - Executing operation on schema 'globalschema: de.cas.open.dbassistent.operations.ddl.CombinedDDLOperation GGUID: FC4A6FCDB6A73CB8B215BCF4A4E2C035 Author: CAS Software AG Table: SysColumnsEIM de.cas.open.dbassistent.operations.ddl.partial.AddColumnOperation ColumnName: CustomMandatory de.cas.open.dbassistent.operations.ddl.partial.AddColumnOperation ColumnName: CustomRecommended de.cas.open.dbassistent.operations.ddl.partial.AddColumnOperation ColumnName: AllowedForMassUpdate
+        [java] 15:13:29, INFO,  , d.c.o.d.i.s.UpdateSchemaFromXMLDefinitionTask - Executing operation on schema 'globalschema': de.cas.open.dbassistent.operations.dml.UpdateColumnMetaInformationOperation GGUID: 731E3555F10130B5A9C7877E35E1E3F8 Author: CAS Software AG TableName: ClientDiagnosticPingResults Description: Add metainformation on multiple columns of ClientDiagnosticPingResults
+        [java] 15:13:29, INFO,  , d.c.o.d.i.s.DBOperationExecutorImpl - Executing operation on schema 'globalschema: de.cas.open.dbassistent.operations.dml.UpdateColumnMetaInformationOperation GGUID: 731E3555F10130B5A9C7877E35E1E3F8 Author: CAS Software AG TableName: ClientDiagnosticPingResults Description: Add metainformation on multiple columns of ClientDiagnosticPingResults
+        [java] 15:13:29, INFO,  , d.c.o.d.i.s.UpdateSchemaFromXMLDefinitionTask - Executing operation on schema 'globalschema': de.cas.open.dbassistent.operations.dml.AddTableMetaInformationOperation GGUID: BEC62A4690F7382C9DA9A217ED481022 Author: CAS Software AG TableName: GlobalActionOrders
+        [java] 15:13:29, INFO,  , d.c.o.d.i.s.DBOperationExecutorImpl - Executing operation on schema 'globalschema: de.cas.open.dbassistent.operations.dml.AddTableMetaInformationOperation GGUID: BEC62A4690F7382C9DA9A217ED481022 Author: CAS Software AG TableName: GlobalActionOrders
+        [java] 15:13:29, INFO,  , d.c.o.d.i.s.UpdateSchemaFromXMLDefinitionTask - Executing operation on schema 'globalschema': de.cas.open.dbassistent.operations.dml.AddColumnMetaInformationOperation GGUID: 6ABC944F6C7C3B9793ABD5853FBF3671 Author: CAS Software AG TableName: GlobalActionOrders Description: Add metainformation on multiple columns of GlobalActionOrders
+        [java] 15:13:29, INFO,  , d.c.o.d.i.s.DBOperationExecutorImpl - Executing operation on schema 'globalschema: de.cas.open.dbassistent.operations.dml.AddColumnMetaInformationOperation GGUID: 6ABC944F6C7C3B9793ABD5853FBF3671 Author: CAS Software AG TableName: GlobalActionOrders Description: Add metainformation on multiple columns of GlobalActionOrders
+        [java] 15:13:29, INFO,  , d.c.o.d.i.s.UpdateSchemaFromXMLDefinitionTask - Executing operation on schema 'globalschema': de.cas.open.dbassistent.operations.dml.UpdateColumnMetaInformationOperation GGUID: 9ED38FD0A3C53732AE50E2C1C77ABF66 Author: CAS Software AG TableName: SysLicence Description: Add metainformation on multiple columns of SysLicence
+        [java] 15:13:29, INFO,  , d.c.o.d.i.s.DBOperationExecutorImpl - Executing operation on schema 'globalschema: de.cas.open.dbassistent.operations.dml.UpdateColumnMetaInformationOperation GGUID: 9ED38FD0A3C53732AE50E2C1C77ABF66 Author: CAS Software AG TableName: SysLicence Description: Add metainformation on multiple columns of SysLicence
+        [java] 15:13:29, INFO,  , d.c.o.d.i.s.UpdateSchemaFromXMLDefinitionTask - Executing operation on schema 'globalschema': de.cas.open.dbassistent.operations.dml.UpdateColumnMetaInformationOperation GGUID: F326B3D01FDD3EE7A203DFABC54411E1 Author: CAS Software AG TableName: SysClient Description: Add metainformation on multiple columns of SysClient
+        [java] 15:13:29, INFO,  , d.c.o.d.i.s.DBOperationExecutorImpl - Executing operation on schema 'globalschema: de.cas.open.dbassistent.operations.dml.UpdateColumnMetaInformationOperation GGUID: F326B3D01FDD3EE7A203DFABC54411E1 Author: CAS Software AG TableName: SysClient Description: Add metainformation on multiple columns of SysClient
+        [java] 15:13:29, INFO,  , d.c.o.d.i.s.UpdateSchemaFromXMLDefinitionTask - Executing operation on schema 'globalschema': de.cas.open.dbassistent.operations.dml.UpdateColumnMetaInformationOperation GGUID: A72E35D6B94A3411B47E998FE373724B Author: CAS Software AG TableName: SysDatabaseServers Description: Add metainformation on multiple columns of SysDatabaseServers
+        [java] 15:13:29, INFO,  , d.c.o.d.i.s.DBOperationExecutorImpl - Executing operation on schema 'globalschema: de.cas.open.dbassistent.operations.dml.UpdateColumnMetaInformationOperation GGUID: A72E35D6B94A3411B47E998FE373724B Author: CAS Software AG TableName: SysDatabaseServers Description: Add metainformation on multiple columns of SysDatabaseServers
+        [java] 15:13:29, INFO,  , d.c.o.d.i.s.UpdateSchemaFromXMLDefinitionTask - Executing operation on schema 'globalschema': de.cas.open.dbassistent.operations.dml.UpdateColumnMetaInformationOperation GGUID: EDBEC3AAB9713D829097E5859B78829D Author: CAS Software AG TableName: SysGlobalUsers Description: Add metainformation on multiple columns of SysGlobalUsers
+        [java] 15:13:29, INFO,  , d.c.o.d.i.s.DBOperationExecutorImpl - Executing operation on schema 'globalschema: de.cas.open.dbassistent.operations.dml.UpdateColumnMetaInformationOperation GGUID: EDBEC3AAB9713D829097E5859B78829D Author: CAS Software AG TableName: SysGlobalUsers Description: Add metainformation on multiple columns of SysGlobalUsers
+        [java] 15:13:29, INFO,  , d.c.o.d.i.s.UpdateSchemaFromXMLDefinitionTask - Executing operation on schema 'globalschema': de.cas.open.dbassistent.operations.dml.UpdateColumnMetaInformationOperation GGUID: 04A66043EA4B30F09A61DD9B52CD448E Author: CAS Software AG TableName: clientSessions Description: Add metainformation on multiple columns of clientSessions
+        [java] 15:13:29, INFO,  , d.c.o.d.i.s.DBOperationExecutorImpl - Executing operation on schema 'globalschema: de.cas.open.dbassistent.operations.dml.UpdateColumnMetaInformationOperation GGUID: 04A66043EA4B30F09A61DD9B52CD448E Author: CAS Software AG TableName: clientSessions Description: Add metainformation on multiple columns of clientSessions
+        [java] 15:13:29, INFO,  , d.c.o.d.i.s.UpdateSchemaFromXMLDefinitionTask - Executing operation on schema 'globalschema': de.cas.open.dbassistent.operations.dml.UpdateColumnMetaInformationOperation GGUID: CE894447565535F0A33C1F5DC09F5707 Author: CAS Software AG TableName: SysCurrency Description: Add metainformation on multiple columns of SysCurrency
+        [java] 15:13:29, INFO,  , d.c.o.d.i.s.DBOperationExecutorImpl - Executing operation on schema 'globalschema: de.cas.open.dbassistent.operations.dml.UpdateColumnMetaInformationOperation GGUID: CE894447565535F0A33C1F5DC09F5707 Author: CAS Software AG TableName: SysCurrency Description: Add metainformation on multiple columns of SysCurrency
+        [java] 15:13:29, INFO,  , d.c.o.d.i.s.UpdateSchemaFromXMLDefinitionTask - Executing operation on schema 'globalschema': de.cas.open.dbassistent.operations.dml.UpdateColumnMetaInformationOperation GGUID: 0ED35C7061203831A59BB57229E3D25E Author: CAS Software AG TableName: SchemaChangeLog Description: Add metainformation on multiple columns of SchemaChangeLog
+        [java] 15:13:29, INFO,  , d.c.o.d.i.s.DBOperationExecutorImpl - Executing operation on schema 'globalschema: de.cas.open.dbassistent.operations.dml.UpdateColumnMetaInformationOperation GGUID: 0ED35C7061203831A59BB57229E3D25E Author: CAS Software AG TableName: SchemaChangeLog Description: Add metainformation on multiple columns of SchemaChangeLog
+        [java] 15:13:29, INFO,  , d.c.o.d.i.s.UpdateSchemaFromXMLDefinitionTask - Executing operation on schema 'globalschema': de.cas.open.dbassistent.operations.dml.UpdateColumnMetaInformationOperation GGUID: E6EEDF725B753E7BA46F6457CEAA0A9F Author: CAS Software AG TableName: GWSysDataObjectSubTable Description: Add metainformation on multiple columns of GWSysDataObjectSubTable
+        [java] 15:13:29, INFO,  , d.c.o.d.i.s.DBOperationExecutorImpl - Executing operation on schema 'globalschema: de.cas.open.dbassistent.operations.dml.UpdateColumnMetaInformationOperation GGUID: E6EEDF725B753E7BA46F6457CEAA0A9F Author: CAS Software AG TableName: GWSysDataObjectSubTable Description: Add metainformation on multiple columns of GWSysDataObjectSubTable
+        [java] 15:13:29, INFO,  , d.c.o.d.i.s.UpdateSchemaFromXMLDefinitionTask - Executing operation on schema 'globalschema': de.cas.open.dbassistent.operations.dml.AddColumnMetaInformationOperation GGUID: 57A62FB626163860A38DFDE6D3BE197D Author: CAS Software AG TableName: SysColumnsEIM Description: Add metainformation on multiple columns of SysColumnsEIM
+        [java] 15:13:29, INFO,  , d.c.o.d.i.s.DBOperationExecutorImpl - Executing operation on schema 'globalschema: de.cas.open.dbassistent.operations.dml.AddColumnMetaInformationOperation GGUID: 57A62FB626163860A38DFDE6D3BE197D Author: CAS Software AG TableName: SysColumnsEIM Description: Add metainformation on multiple columns of SysColumnsEIM
+        [java] 15:13:29, INFO,  , d.c.o.d.i.s.UpdateSchemaFromXMLDefinitionTask - Executing operation on schema 'globalschema': de.cas.open.dbassistent.operations.dml.UpdateColumnMetaInformationOperation GGUID: F337F14FDFE93BC9A3CB9E44DAF58499 Author: CAS Software AG TableName: SysColumnsEIM Description: Add metainformation on multiple columns of SysColumnsEIM
+        [java] 15:13:29, INFO,  , d.c.o.d.i.s.DBOperationExecutorImpl - Executing operation on schema 'globalschema: de.cas.open.dbassistent.operations.dml.UpdateColumnMetaInformationOperation GGUID: F337F14FDFE93BC9A3CB9E44DAF58499 Author: CAS Software AG TableName: SysColumnsEIM Description: Add metainformation on multiple columns of SysColumnsEIM
+        [java] 15:13:29, INFO,  , d.c.o.d.i.s.UpdateSchemaFromXMLDefinitionTask - Executing operation on schema 'globalschema': de.cas.open.dbassistent.operations.dml.UpdateColumnMetaInformationOperation GGUID: 06D355C86AE03C9E991A5877151257C7 Author: CAS Software AG TableName: SysService Description: Add metainformation on multiple columns of SysService
+        [java] 15:13:29, INFO,  , d.c.o.d.i.s.DBOperationExecutorImpl - Executing operation on schema 'globalschema: de.cas.open.dbassistent.operations.dml.UpdateColumnMetaInformationOperation GGUID: 06D355C86AE03C9E991A5877151257C7 Author: CAS Software AG TableName: SysService Description: Add metainformation on multiple columns of SysService
+        [java] 15:13:29, INFO,  , d.c.o.d.i.s.UpdateSchemaFromXMLDefinitionTask - Executing operation on schema 'globalschema': de.cas.open.dbassistent.operations.dml.UpdateColumnMetaInformationOperation GGUID: 549BFAE3FFAB3D09A221D5C46B4C8D60 Author: CAS Software AG TableName: SysTable Description: Add metainformation on multiple columns of SysTable
+        [java] 15:13:29, INFO,  , d.c.o.d.i.s.DBOperationExecutorImpl - Executing operation on schema 'globalschema: de.cas.open.dbassistent.operations.dml.UpdateColumnMetaInformationOperation GGUID: 549BFAE3FFAB3D09A221D5C46B4C8D60 Author: CAS Software AG TableName: SysTable Description: Add metainformation on multiple columns of SysTable
+        [java] 15:13:29, INFO,  , d.c.o.d.i.s.UpdateSchemaFromXMLDefinitionTask - Executing operation on schema 'globalschema': de.cas.open.dbassistent.operations.dml.UpdateColumnMetaInformationOperation GGUID: 8679E98D66EA3EA98BA8D8B705C36624 Author: CAS Software AG TableName: geodb_textdata Description: Add metainformation on multiple columns of geodb_textdata
+        [java] 15:13:29, INFO,  , d.c.o.d.i.s.DBOperationExecutorImpl - Executing operation on schema 'globalschema: de.cas.open.dbassistent.operations.dml.UpdateColumnMetaInformationOperation GGUID: 8679E98D66EA3EA98BA8D8B705C36624 Author: CAS Software AG TableName: geodb_textdata Description: Add metainformation on multiple columns of geodb_textdata
+        [java] 15:13:29, INFO,  , d.c.o.d.i.s.UpdateSchemaFromXMLDefinitionTask - Executing operation on schema 'globalschema': de.cas.open.dbassistent.operations.dml.UpdateColumnMetaInformationOperation GGUID: 801D5E67B2963F888C378BDC70C53616 Author: CAS Software AG TableName: geodb_coordinates Description: Add metainformation on multiple columns of geodb_coordinates
+        [java] 15:13:29, INFO,  , d.c.o.d.i.s.DBOperationExecutorImpl - Executing operation on schema 'globalschema: de.cas.open.dbassistent.operations.dml.UpdateColumnMetaInformationOperation GGUID: 801D5E67B2963F888C378BDC70C53616 Author: CAS Software AG TableName: geodb_coordinates Description: Add metainformation on multiple columns of geodb_coordinates
+        [java] 15:13:29, INFO,  , d.c.o.d.i.s.UpdateSchemaFromXMLDefinitionTask - Executing operation on schema 'globalschema': de.cas.open.dbassistent.operations.dml.UpdateColumnMetaInformationOperation GGUID: AFAF8DF883F73FE6AAEAC5D8B0F76016 Author: CAS Software AG TableName: syspartnercampaigns Description: Add metainformation on multiple columns of syspartnercampaigns
+        [java] 15:13:29, INFO,  , d.c.o.d.i.s.DBOperationExecutorImpl - Executing operation on schema 'globalschema: de.cas.open.dbassistent.operations.dml.UpdateColumnMetaInformationOperation GGUID: AFAF8DF883F73FE6AAEAC5D8B0F76016 Author: CAS Software AG TableName: syspartnercampaigns Description: Add metainformation on multiple columns of syspartnercampaigns
+        [java] 15:13:29, INFO,  , d.c.o.d.i.s.UpdateSchemaFromXMLDefinitionTask - Executing operation on schema 'globalschema': de.cas.open.dbassistent.operations.dml.UpdateColumnMetaInformationOperation GGUID: 0AFEA301477C33EDAF13B2FAB70D0ABA Author: CAS Software AG TableName: syspartners Description: Add metainformation on multiple columns of syspartners
+        [java] 15:13:29, INFO,  , d.c.o.d.i.s.DBOperationExecutorImpl - Executing operation on schema 'globalschema: de.cas.open.dbassistent.operations.dml.UpdateColumnMetaInformationOperation GGUID: 0AFEA301477C33EDAF13B2FAB70D0ABA Author: CAS Software AG TableName: syspartners Description: Add metainformation on multiple columns of syspartners
+        [java] 15:13:29, INFO,  , d.c.o.d.i.s.UpdateSchemaFromXMLDefinitionTask - Executing operation on schema 'globalschema': de.cas.open.dbassistent.operations.dml.UpdateColumnMetaInformationOperation GGUID: 966C5699C35631B48442C23CBC5D14E5 Author: CAS Software AG TableName: SystemNews Description: Add metainformation on multiple columns of SystemNews
+        [java] 15:13:29, INFO,  , d.c.o.d.i.s.DBOperationExecutorImpl - Executing operation on schema 'globalschema: de.cas.open.dbassistent.operations.dml.UpdateColumnMetaInformationOperation GGUID: 966C5699C35631B48442C23CBC5D14E5 Author: CAS Software AG TableName: SystemNews Description: Add metainformation on multiple columns of SystemNews
+        [java] 15:13:29, INFO,  , d.c.o.d.AbstractDatabaseTask - Execution of task UpdateSchemaFromXMLDefinitionTask on the global schema took 0,487 s
+        [java] 15:13:29, INFO,  , d.c.o.d.AbstractDatabaseTask - ########################################################################
+        [java] 15:13:29, INFO,  , d.c.o.d.AbstractDatabaseTask - Executing task: ExecuteDbOperationsTask on the global schema
+        [java] 15:13:30, INFO,  , d.c.o.d.AbstractDatabaseTask - Execution of task ExecuteDbOperationsTask on the global schema took 0,013 s
+        [java] 15:13:30, INFO,  , d.c.o.d.AbstractDatabaseTask - ########################################################################
+        [java] 15:13:30, INFO,  , d.c.o.d.AbstractDatabaseTask - Executing task: StoredProcedureUpdatingTask on the global schema
+        [java] 15:13:30, INFO,  , d.c.o.d.AbstractDatabaseTask - Execution of task StoredProcedureUpdatingTask on the global schema took 0 s
+        [java] 15:13:30, INFO,  , d.c.o.d.AbstractDatabaseTask - ########################################################################
+        [java] 15:13:30, INFO,  , d.c.o.d.AbstractDatabaseTask - Executing task: RewriteResourceBundlesTask on the global schema
+        [java] 15:13:30, INFO,  , d.c.o.d.i.t.RewriteResourceBundlesTask - ###############################################################
+        [java] 15:13:30, INFO,  , d.c.o.d.i.t.RewriteResourceBundlesTask - Rewriting resourceBundles
+        [java] 15:13:30, INFO,  , d.c.o.d.i.t.ResourceBundleImporter - Rewriting contents of 'resourceBundles'...
+        [java] 15:13:30, INFO,  , d.c.o.d.i.t.LanguageFilesImporterUtil - Found 16 master/base bundles and 0 overriding bundles.
+        [java] 15:13:30, INFO,  , d.c.o.d.i.t.ResourceBundleImporter - 0 of 1932 resource bundle entries are overwritten.
+        [java] 15:13:30, INFO,  , d.c.o.d.i.t.ResourceBundleImporter - 1932 resourcebundle entries inserted.
+        [java] 15:13:30, INFO,  , d.c.o.d.i.t.RewriteResourceBundlesTask - Rewriting resourceBundles done.
+        [java] 15:13:30, INFO,  , d.c.o.d.AbstractDatabaseTask - Execution of task RewriteResourceBundlesTask on the global schema took 0,38 s
+        [java] 15:13:30, INFO,  , d.c.o.d.AbstractDatabaseTask - ########################################################################
+        [java] 15:13:30, INFO,  , d.c.o.d.AbstractDatabaseTask - Executing task: ImportFilesTask on the global schema
+        [java] 15:13:30, INFO,  , d.c.o.d.AbstractDatabaseTask - Execution of task ImportFilesTask on the global schema took 0,01 s
+        [java] 15:13:30, INFO,  , d.c.o.d.AbstractDatabaseTask - ########################################################################
+        [java] 15:13:30, INFO,  , d.c.o.d.AbstractDatabaseTask - Executing task: CheckIntegrityTask on the global schema
+        [java] 15:13:30, INFO,  , d.c.o.d.i.schema.CheckIntegrityTask - Checking integrity of schema 'globalschema'
+        [java] 15:13:30, INFO,  , d.c.o.d.AbstractDatabaseTask - Execution of task CheckIntegrityTask on the global schema took 0,034 s
+        [java] 15:13:30, INFO,  , d.c.o.d.AbstractDatabaseTask - ########################################################################
+        [java] 15:13:30, INFO,  , d.c.o.d.AbstractDatabaseTask - Executing task: CheckDocStoreIntegrityTask on the global schema
+        [java] 15:13:30, INFO,  , d.c.o.d.i.s.DocumentStoreConsistencyChecker - Checking whether file in root of the document store exists.
+        [java] 15:13:30, INFO,  , d.c.o.d.AbstractDatabaseTask - Execution of task CheckDocStoreIntegrityTask on the global schema took 0 s
+        [java] 15:13:30, INFO,  , d.c.o.d.internal.DBAssistent - Global schema 'globalschema' finished. Duration: 928.794459
+        [java] 15:13:30, INFO,  , d.c.o.d.internal.DBAssistent - ##################################################################################################################
+        [java] 15:13:30, INFO,  , d.c.o.d.internal.DBAssistent - ##################################################################################################################
+        [java] 15:13:30, INFO,  , d.c.o.d.internal.DBAssistent - ##################################################################################################################
+        [java] 15:13:30, INFO,  , d.c.o.d.internal.DBAssistent - Processing client #0 'democlient'.
+        [java] 15:13:30, INFO,  , d.c.o.d.AbstractDatabaseTask - ########################################################################
+        [java] 15:13:30, INFO,  , d.c.o.d.AbstractDatabaseTask - Executing task: CheckProductTask on client democlient
+        [java] 15:13:34, ERROR,  , d.c.o.d.internal.DBAssistent - Fatal error while processing client 'democlient'. Continuing with next client. Error:
+        [java] org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+        [java] 	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:80) ~[org.springframework.jdbc_3.0.5.RELEASE.jar:3.0.5.RELEASE]
+        [java] 	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:572) ~[org.springframework.jdbc_3.0.5.RELEASE.jar:3.0.5.RELEASE]
+        [java] 	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:636) ~[org.springframework.jdbc_3.0.5.RELEASE.jar:3.0.5.RELEASE]
+        [java] 	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:665) ~[org.springframework.jdbc_3.0.5.RELEASE.jar:3.0.5.RELEASE]
+        [java] 	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:673) ~[org.springframework.jdbc_3.0.5.RELEASE.jar:3.0.5.RELEASE]
+        [java] 	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:728) ~[org.springframework.jdbc_3.0.5.RELEASE.jar:3.0.5.RELEASE]
+        [java] 	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:748) ~[org.springframework.jdbc_3.0.5.RELEASE.jar:3.0.5.RELEASE]
+        [java] 	at de.cas.open.dbassistent.internal.CheckProductTask.getPreviousProduct(CheckProductTask.java:181) ~[de.cas.open.dbassistent_1.0.0.v20140704-1337.jar:na]
+        [java] 	at de.cas.open.dbassistent.internal.CheckProductTask.executeOnClientSchemaInternal(CheckProductTask.java:95) ~[de.cas.open.dbassistent_1.0.0.v20140704-1337.jar:na]
+        [java] 	at de.cas.open.dbassistent.AbstractDatabaseTask.executeOnClientSchema(AbstractDatabaseTask.java:76) ~[de.cas.open.dbassistent_1.0.0.v20140704-1337.jar:na]
+        [java] 	at de.cas.open.dbassistent.internal.DBAssistent.run(DBAssistent.java:352) [de.cas.open.dbassistent_1.0.0.v20140704-1337.jar:na]
+        [java] 	at de.cas.open.dbassistent.internal.DBAssistent.main(DBAssistent.java:301) [de.cas.open.dbassistent_1.0.0.v20140704-1337.jar:na]
+        [java] Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+        [java] 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_20]
+        [java] 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source) ~[na:1.8.0_20]
+        [java] 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source) ~[na:1.8.0_20]
+        [java] 	at java.lang.reflect.Constructor.newInstance(Unknown Source) ~[na:1.8.0_20]
+        [java] 	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.Util.getInstance(Util.java:386) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1013) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:987) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:982) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:927) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:2237) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2158) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:792) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_20]
+        [java] 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source) ~[na:1.8.0_20]
+        [java] 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source) ~[na:1.8.0_20]
+        [java] 	at java.lang.reflect.Constructor.newInstance(Unknown Source) ~[na:1.8.0_20]
+        [java] 	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:381) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:305) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.jdbc2.optional.MysqlDataSource.getConnection(MysqlDataSource.java:440) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.jdbc2.optional.MysqlDataSource.getConnection(MysqlDataSource.java:138) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.jdbc2.optional.MysqlDataSource.getConnection(MysqlDataSource.java:108) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at org.apache.tomcat.jdbc.pool.PooledConnection.connectUsingDataSource(PooledConnection.java:219) ~[org.apache.tomcat.jdbc_1.1.0.1.jar:na]
+        [java] 	at org.apache.tomcat.jdbc.pool.PooledConnection.connect(PooledConnection.java:174) ~[org.apache.tomcat.jdbc_1.1.0.1.jar:na]
+        [java] 	at org.apache.tomcat.jdbc.pool.ConnectionPool.createConnection(ConnectionPool.java:660) ~[org.apache.tomcat.jdbc_1.1.0.1.jar:na]
+        [java] 	at org.apache.tomcat.jdbc.pool.ConnectionPool.borrowConnection(ConnectionPool.java:602) ~[org.apache.tomcat.jdbc_1.1.0.1.jar:na]
+        [java] 	at org.apache.tomcat.jdbc.pool.ConnectionPool.getConnection(ConnectionPool.java:174) ~[org.apache.tomcat.jdbc_1.1.0.1.jar:na]
+        [java] 	at org.apache.tomcat.jdbc.pool.DataSourceProxy.getConnection(DataSourceProxy.java:123) ~[org.apache.tomcat.jdbc_1.1.0.1.jar:na]
+        [java] 	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:111) ~[org.springframework.jdbc_3.0.5.RELEASE.jar:3.0.5.RELEASE]
+        [java] 	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:77) ~[org.springframework.jdbc_3.0.5.RELEASE.jar:3.0.5.RELEASE]
+        [java] 	... 11 common frames omitted
+        [java] Caused by: java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+        [java] 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1073) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3609) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3541) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:943) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.MysqlIO.secureAuth411(MysqlIO.java:4113) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1308) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2336) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:2176) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	... 32 common frames omitted
+        [java] 15:13:34, ERROR,  , d.c.o.d.internal.DBAssistent - Client 'democlient' was NOT processed completly!
+        [java] 15:13:34, INFO,  , d.c.o.d.internal.DBAssistent - ##################################################################################################################
+        [java] 15:13:34, INFO,  , d.c.o.d.internal.DBAssistent - ##################################################################################################################
+        [java] 15:13:34, INFO,  , d.c.o.d.internal.DBAssistent - ##################################################################################################################
+        [java] 15:13:34, INFO,  , d.c.o.d.internal.DBAssistent - Processing client #1 'leerermandant'.
+        [java] 15:13:34, INFO,  , d.c.o.d.AbstractDatabaseTask - ########################################################################
+        [java] 15:13:34, INFO,  , d.c.o.d.AbstractDatabaseTask - Executing task: CheckProductTask on client leerermandant
+        [java] 15:13:38, ERROR,  , d.c.o.d.internal.DBAssistent - Fatal error while processing client 'leerermandant'. Continuing with next client. Error:
+        [java] org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+        [java] 	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:80) ~[org.springframework.jdbc_3.0.5.RELEASE.jar:3.0.5.RELEASE]
+        [java] 	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:572) ~[org.springframework.jdbc_3.0.5.RELEASE.jar:3.0.5.RELEASE]
+        [java] 	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:636) ~[org.springframework.jdbc_3.0.5.RELEASE.jar:3.0.5.RELEASE]
+        [java] 	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:665) ~[org.springframework.jdbc_3.0.5.RELEASE.jar:3.0.5.RELEASE]
+        [java] 	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:673) ~[org.springframework.jdbc_3.0.5.RELEASE.jar:3.0.5.RELEASE]
+        [java] 	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:728) ~[org.springframework.jdbc_3.0.5.RELEASE.jar:3.0.5.RELEASE]
+        [java] 	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:748) ~[org.springframework.jdbc_3.0.5.RELEASE.jar:3.0.5.RELEASE]
+        [java] 	at de.cas.open.dbassistent.internal.CheckProductTask.getPreviousProduct(CheckProductTask.java:181) ~[de.cas.open.dbassistent_1.0.0.v20140704-1337.jar:na]
+        [java] 	at de.cas.open.dbassistent.internal.CheckProductTask.executeOnClientSchemaInternal(CheckProductTask.java:95) ~[de.cas.open.dbassistent_1.0.0.v20140704-1337.jar:na]
+        [java] 	at de.cas.open.dbassistent.AbstractDatabaseTask.executeOnClientSchema(AbstractDatabaseTask.java:76) ~[de.cas.open.dbassistent_1.0.0.v20140704-1337.jar:na]
+        [java] 	at de.cas.open.dbassistent.internal.DBAssistent.run(DBAssistent.java:352) [de.cas.open.dbassistent_1.0.0.v20140704-1337.jar:na]
+        [java] 	at de.cas.open.dbassistent.internal.DBAssistent.main(DBAssistent.java:301) [de.cas.open.dbassistent_1.0.0.v20140704-1337.jar:na]
+        [java] Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+        [java] 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_20]
+        [java] 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source) ~[na:1.8.0_20]
+        [java] 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source) ~[na:1.8.0_20]
+        [java] 	at java.lang.reflect.Constructor.newInstance(Unknown Source) ~[na:1.8.0_20]
+        [java] 	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.Util.getInstance(Util.java:386) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1013) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:987) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:982) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:927) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:2237) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2158) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:792) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_20]
+        [java] 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source) ~[na:1.8.0_20]
+        [java] 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source) ~[na:1.8.0_20]
+        [java] 	at java.lang.reflect.Constructor.newInstance(Unknown Source) ~[na:1.8.0_20]
+        [java] 	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:381) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:305) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.jdbc2.optional.MysqlDataSource.getConnection(MysqlDataSource.java:440) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.jdbc2.optional.MysqlDataSource.getConnection(MysqlDataSource.java:138) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.jdbc2.optional.MysqlDataSource.getConnection(MysqlDataSource.java:108) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at org.apache.tomcat.jdbc.pool.PooledConnection.connectUsingDataSource(PooledConnection.java:219) ~[org.apache.tomcat.jdbc_1.1.0.1.jar:na]
+        [java] 	at org.apache.tomcat.jdbc.pool.PooledConnection.connect(PooledConnection.java:174) ~[org.apache.tomcat.jdbc_1.1.0.1.jar:na]
+        [java] 	at org.apache.tomcat.jdbc.pool.ConnectionPool.createConnection(ConnectionPool.java:660) ~[org.apache.tomcat.jdbc_1.1.0.1.jar:na]
+        [java] 	at org.apache.tomcat.jdbc.pool.ConnectionPool.borrowConnection(ConnectionPool.java:602) ~[org.apache.tomcat.jdbc_1.1.0.1.jar:na]
+        [java] 	at org.apache.tomcat.jdbc.pool.ConnectionPool.getConnection(ConnectionPool.java:174) ~[org.apache.tomcat.jdbc_1.1.0.1.jar:na]
+        [java] 	at org.apache.tomcat.jdbc.pool.DataSourceProxy.getConnection(DataSourceProxy.java:124) ~[org.apache.tomcat.jdbc_1.1.0.1.jar:na]
+        [java] 	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:111) ~[org.springframework.jdbc_3.0.5.RELEASE.jar:3.0.5.RELEASE]
+        [java] 	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:77) ~[org.springframework.jdbc_3.0.5.RELEASE.jar:3.0.5.RELEASE]
+        [java] 	... 11 common frames omitted
+        [java] Caused by: java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+        [java] 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1073) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3609) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3541) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:943) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.MysqlIO.secureAuth411(MysqlIO.java:4113) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1308) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2336) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:2176) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	... 32 common frames omitted
+        [java] 15:13:38, ERROR,  , d.c.o.d.internal.DBAssistent - Client 'leerermandant' was NOT processed completly!
+        [java] 15:13:38, INFO,  , d.c.o.d.internal.DBAssistent - ##################################################################################################################
+        [java] 15:13:38, INFO,  , d.c.o.d.internal.DBAssistent - ##################################################################################################################
+        [java] 15:13:38, INFO,  , d.c.o.d.internal.DBAssistent - ##################################################################################################################
+        [java] 15:13:38, INFO,  , d.c.o.d.internal.DBAssistent - Processing client #2 'sandbox'.
+        [java] 15:13:38, INFO,  , d.c.o.d.AbstractDatabaseTask - ########################################################################
+        [java] 15:13:38, INFO,  , d.c.o.d.AbstractDatabaseTask - Executing task: CheckProductTask on client sandbox
+        [java] 15:13:42, ERROR,  , d.c.o.d.internal.DBAssistent - Fatal error while processing client 'sandbox'. Continuing with next client. Error:
+        [java] org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+        [java] 	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:80) ~[org.springframework.jdbc_3.0.5.RELEASE.jar:3.0.5.RELEASE]
+        [java] 	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:572) ~[org.springframework.jdbc_3.0.5.RELEASE.jar:3.0.5.RELEASE]
+        [java] 	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:636) ~[org.springframework.jdbc_3.0.5.RELEASE.jar:3.0.5.RELEASE]
+        [java] 	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:665) ~[org.springframework.jdbc_3.0.5.RELEASE.jar:3.0.5.RELEASE]
+        [java] 	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:673) ~[org.springframework.jdbc_3.0.5.RELEASE.jar:3.0.5.RELEASE]
+        [java] 	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:728) ~[org.springframework.jdbc_3.0.5.RELEASE.jar:3.0.5.RELEASE]
+        [java] 	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:748) ~[org.springframework.jdbc_3.0.5.RELEASE.jar:3.0.5.RELEASE]
+        [java] 	at de.cas.open.dbassistent.internal.CheckProductTask.getPreviousProduct(CheckProductTask.java:181) ~[de.cas.open.dbassistent_1.0.0.v20140704-1337.jar:na]
+        [java] 	at de.cas.open.dbassistent.internal.CheckProductTask.executeOnClientSchemaInternal(CheckProductTask.java:95) ~[de.cas.open.dbassistent_1.0.0.v20140704-1337.jar:na]
+        [java] 	at de.cas.open.dbassistent.AbstractDatabaseTask.executeOnClientSchema(AbstractDatabaseTask.java:76) ~[de.cas.open.dbassistent_1.0.0.v20140704-1337.jar:na]
+        [java] 	at de.cas.open.dbassistent.internal.DBAssistent.run(DBAssistent.java:352) [de.cas.open.dbassistent_1.0.0.v20140704-1337.jar:na]
+        [java] 	at de.cas.open.dbassistent.internal.DBAssistent.main(DBAssistent.java:301) [de.cas.open.dbassistent_1.0.0.v20140704-1337.jar:na]
+        [java] Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+        [java] 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_20]
+        [java] 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source) ~[na:1.8.0_20]
+        [java] 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source) ~[na:1.8.0_20]
+        [java] 	at java.lang.reflect.Constructor.newInstance(Unknown Source) ~[na:1.8.0_20]
+        [java] 	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.Util.getInstance(Util.java:386) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1013) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:987) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:982) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:927) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:2237) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2158) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:792) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_20]
+        [java] 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source) ~[na:1.8.0_20]
+        [java] 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source) ~[na:1.8.0_20]
+        [java] 	at java.lang.reflect.Constructor.newInstance(Unknown Source) ~[na:1.8.0_20]
+        [java] 	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:381) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:305) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.jdbc2.optional.MysqlDataSource.getConnection(MysqlDataSource.java:440) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.jdbc2.optional.MysqlDataSource.getConnection(MysqlDataSource.java:138) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.jdbc2.optional.MysqlDataSource.getConnection(MysqlDataSource.java:108) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at org.apache.tomcat.jdbc.pool.PooledConnection.connectUsingDataSource(PooledConnection.java:219) ~[org.apache.tomcat.jdbc_1.1.0.1.jar:na]
+        [java] 	at org.apache.tomcat.jdbc.pool.PooledConnection.connect(PooledConnection.java:174) ~[org.apache.tomcat.jdbc_1.1.0.1.jar:na]
+        [java] 	at org.apache.tomcat.jdbc.pool.ConnectionPool.createConnection(ConnectionPool.java:660) ~[org.apache.tomcat.jdbc_1.1.0.1.jar:na]
+        [java] 	at org.apache.tomcat.jdbc.pool.ConnectionPool.borrowConnection(ConnectionPool.java:602) ~[org.apache.tomcat.jdbc_1.1.0.1.jar:na]
+        [java] 	at org.apache.tomcat.jdbc.pool.ConnectionPool.getConnection(ConnectionPool.java:174) ~[org.apache.tomcat.jdbc_1.1.0.1.jar:na]
+        [java] 	at org.apache.tomcat.jdbc.pool.DataSourceProxy.getConnection(DataSourceProxy.java:124) ~[org.apache.tomcat.jdbc_1.1.0.1.jar:na]
+        [java] 	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:111) ~[org.springframework.jdbc_3.0.5.RELEASE.jar:3.0.5.RELEASE]
+        [java] 	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:77) ~[org.springframework.jdbc_3.0.5.RELEASE.jar:3.0.5.RELEASE]
+        [java] 	... 11 common frames omitted
+        [java] Caused by: java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+        [java] 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1073) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3609) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3541) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:943) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.MysqlIO.secureAuth411(MysqlIO.java:4113) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1308) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2336) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:2176) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	... 32 common frames omitted
+        [java] 15:13:42, ERROR,  , d.c.o.d.internal.DBAssistent - Client 'sandbox' was NOT processed completly!
+        [java] 15:13:42, INFO,  , d.c.o.d.internal.DBAssistent - ##################################################################################################################
+        [java] 15:13:42, INFO,  , d.c.o.d.internal.DBAssistent - ##################################################################################################################
+        [java] 15:13:42, INFO,  , d.c.o.d.internal.DBAssistent - ##################################################################################################################
+        [java] 15:13:42, INFO,  , d.c.o.d.internal.DBAssistent - Processing client #3 'teamcrm1'.
+        [java] 15:13:42, INFO,  , d.c.o.d.AbstractDatabaseTask - ########################################################################
+        [java] 15:13:42, INFO,  , d.c.o.d.AbstractDatabaseTask - Executing task: CheckProductTask on client teamcrm1
+        [java] 15:13:46, ERROR,  , d.c.o.d.internal.DBAssistent - Fatal error while processing client 'teamcrm1'. Continuing with next client. Error:
+        [java] org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+        [java] 	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:80) ~[org.springframework.jdbc_3.0.5.RELEASE.jar:3.0.5.RELEASE]
+        [java] 	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:572) ~[org.springframework.jdbc_3.0.5.RELEASE.jar:3.0.5.RELEASE]
+        [java] 	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:636) ~[org.springframework.jdbc_3.0.5.RELEASE.jar:3.0.5.RELEASE]
+        [java] 	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:665) ~[org.springframework.jdbc_3.0.5.RELEASE.jar:3.0.5.RELEASE]
+        [java] 	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:673) ~[org.springframework.jdbc_3.0.5.RELEASE.jar:3.0.5.RELEASE]
+        [java] 	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:728) ~[org.springframework.jdbc_3.0.5.RELEASE.jar:3.0.5.RELEASE]
+        [java] 	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:748) ~[org.springframework.jdbc_3.0.5.RELEASE.jar:3.0.5.RELEASE]
+        [java] 	at de.cas.open.dbassistent.internal.CheckProductTask.getPreviousProduct(CheckProductTask.java:181) ~[de.cas.open.dbassistent_1.0.0.v20140704-1337.jar:na]
+        [java] 	at de.cas.open.dbassistent.internal.CheckProductTask.executeOnClientSchemaInternal(CheckProductTask.java:95) ~[de.cas.open.dbassistent_1.0.0.v20140704-1337.jar:na]
+        [java] 	at de.cas.open.dbassistent.AbstractDatabaseTask.executeOnClientSchema(AbstractDatabaseTask.java:76) ~[de.cas.open.dbassistent_1.0.0.v20140704-1337.jar:na]
+        [java] 	at de.cas.open.dbassistent.internal.DBAssistent.run(DBAssistent.java:352) [de.cas.open.dbassistent_1.0.0.v20140704-1337.jar:na]
+        [java] 	at de.cas.open.dbassistent.internal.DBAssistent.main(DBAssistent.java:301) [de.cas.open.dbassistent_1.0.0.v20140704-1337.jar:na]
+        [java] Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+        [java] 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_20]
+        [java] 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source) ~[na:1.8.0_20]
+        [java] 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source) ~[na:1.8.0_20]
+        [java] 	at java.lang.reflect.Constructor.newInstance(Unknown Source) ~[na:1.8.0_20]
+        [java] 	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.Util.getInstance(Util.java:386) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1013) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:987) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:982) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:927) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:2237) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2158) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:792) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_20]
+        [java] 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source) ~[na:1.8.0_20]
+        [java] 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source) ~[na:1.8.0_20]
+        [java] 	at java.lang.reflect.Constructor.newInstance(Unknown Source) ~[na:1.8.0_20]
+        [java] 	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:381) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:305) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.jdbc2.optional.MysqlDataSource.getConnection(MysqlDataSource.java:440) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.jdbc2.optional.MysqlDataSource.getConnection(MysqlDataSource.java:138) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.jdbc2.optional.MysqlDataSource.getConnection(MysqlDataSource.java:108) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at org.apache.tomcat.jdbc.pool.PooledConnection.connectUsingDataSource(PooledConnection.java:219) ~[org.apache.tomcat.jdbc_1.1.0.1.jar:na]
+        [java] 	at org.apache.tomcat.jdbc.pool.PooledConnection.connect(PooledConnection.java:174) ~[org.apache.tomcat.jdbc_1.1.0.1.jar:na]
+        [java] 	at org.apache.tomcat.jdbc.pool.ConnectionPool.createConnection(ConnectionPool.java:660) ~[org.apache.tomcat.jdbc_1.1.0.1.jar:na]
+        [java] 	at org.apache.tomcat.jdbc.pool.ConnectionPool.borrowConnection(ConnectionPool.java:602) ~[org.apache.tomcat.jdbc_1.1.0.1.jar:na]
+        [java] 	at org.apache.tomcat.jdbc.pool.ConnectionPool.getConnection(ConnectionPool.java:174) ~[org.apache.tomcat.jdbc_1.1.0.1.jar:na]
+        [java] 	at org.apache.tomcat.jdbc.pool.DataSourceProxy.getConnection(DataSourceProxy.java:124) ~[org.apache.tomcat.jdbc_1.1.0.1.jar:na]
+        [java] 	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:111) ~[org.springframework.jdbc_3.0.5.RELEASE.jar:3.0.5.RELEASE]
+        [java] 	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:77) ~[org.springframework.jdbc_3.0.5.RELEASE.jar:3.0.5.RELEASE]
+        [java] 	... 11 common frames omitted
+        [java] Caused by: java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+        [java] 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1073) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3609) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3541) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:943) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.MysqlIO.secureAuth411(MysqlIO.java:4113) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1308) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2336) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:2176) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	... 32 common frames omitted
+        [java] 15:13:46, ERROR,  , d.c.o.d.internal.DBAssistent - Client 'teamcrm1' was NOT processed completly!
+        [java] 15:13:46, INFO,  , d.c.o.d.internal.DBAssistent - ##################################################################################################################
+        [java] 15:13:46, INFO,  , d.c.o.d.internal.DBAssistent - ##################################################################################################################
+        [java] 15:13:46, INFO,  , d.c.o.d.internal.DBAssistent - ##################################################################################################################
+        [java] 15:13:46, INFO,  , d.c.o.d.internal.DBAssistent - Processing client #4 'teamcrm2'.
+        [java] 15:13:46, INFO,  , d.c.o.d.AbstractDatabaseTask - ########################################################################
+        [java] 15:13:46, INFO,  , d.c.o.d.AbstractDatabaseTask - Executing task: CheckProductTask on client teamcrm2
+        [java] 15:13:50, ERROR,  , d.c.o.d.internal.DBAssistent - Fatal error while processing client 'teamcrm2'. Continuing with next client. Error:
+        [java] org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+        [java] 	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:80) ~[org.springframework.jdbc_3.0.5.RELEASE.jar:3.0.5.RELEASE]
+        [java] 	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:572) ~[org.springframework.jdbc_3.0.5.RELEASE.jar:3.0.5.RELEASE]
+        [java] 	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:636) ~[org.springframework.jdbc_3.0.5.RELEASE.jar:3.0.5.RELEASE]
+        [java] 	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:665) ~[org.springframework.jdbc_3.0.5.RELEASE.jar:3.0.5.RELEASE]
+        [java] 	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:673) ~[org.springframework.jdbc_3.0.5.RELEASE.jar:3.0.5.RELEASE]
+        [java] 	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:728) ~[org.springframework.jdbc_3.0.5.RELEASE.jar:3.0.5.RELEASE]
+        [java] 	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:748) ~[org.springframework.jdbc_3.0.5.RELEASE.jar:3.0.5.RELEASE]
+        [java] 	at de.cas.open.dbassistent.internal.CheckProductTask.getPreviousProduct(CheckProductTask.java:181) ~[de.cas.open.dbassistent_1.0.0.v20140704-1337.jar:na]
+        [java] 	at de.cas.open.dbassistent.internal.CheckProductTask.executeOnClientSchemaInternal(CheckProductTask.java:95) ~[de.cas.open.dbassistent_1.0.0.v20140704-1337.jar:na]
+        [java] 	at de.cas.open.dbassistent.AbstractDatabaseTask.executeOnClientSchema(AbstractDatabaseTask.java:76) ~[de.cas.open.dbassistent_1.0.0.v20140704-1337.jar:na]
+        [java] 	at de.cas.open.dbassistent.internal.DBAssistent.run(DBAssistent.java:352) [de.cas.open.dbassistent_1.0.0.v20140704-1337.jar:na]
+        [java] 	at de.cas.open.dbassistent.internal.DBAssistent.main(DBAssistent.java:301) [de.cas.open.dbassistent_1.0.0.v20140704-1337.jar:na]
+        [java] Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+        [java] 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_20]
+        [java] 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source) ~[na:1.8.0_20]
+        [java] 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source) ~[na:1.8.0_20]
+        [java] 	at java.lang.reflect.Constructor.newInstance(Unknown Source) ~[na:1.8.0_20]
+        [java] 	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.Util.getInstance(Util.java:386) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1013) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:987) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:982) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:927) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:2237) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2158) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:792) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_20]
+        [java] 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source) ~[na:1.8.0_20]
+        [java] 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source) ~[na:1.8.0_20]
+        [java] 	at java.lang.reflect.Constructor.newInstance(Unknown Source) ~[na:1.8.0_20]
+        [java] 	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:381) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:305) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.jdbc2.optional.MysqlDataSource.getConnection(MysqlDataSource.java:440) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.jdbc2.optional.MysqlDataSource.getConnection(MysqlDataSource.java:138) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.jdbc2.optional.MysqlDataSource.getConnection(MysqlDataSource.java:108) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at org.apache.tomcat.jdbc.pool.PooledConnection.connectUsingDataSource(PooledConnection.java:219) ~[org.apache.tomcat.jdbc_1.1.0.1.jar:na]
+        [java] 	at org.apache.tomcat.jdbc.pool.PooledConnection.connect(PooledConnection.java:174) ~[org.apache.tomcat.jdbc_1.1.0.1.jar:na]
+        [java] 	at org.apache.tomcat.jdbc.pool.ConnectionPool.createConnection(ConnectionPool.java:660) ~[org.apache.tomcat.jdbc_1.1.0.1.jar:na]
+        [java] 	at org.apache.tomcat.jdbc.pool.ConnectionPool.borrowConnection(ConnectionPool.java:602) ~[org.apache.tomcat.jdbc_1.1.0.1.jar:na]
+        [java] 	at org.apache.tomcat.jdbc.pool.ConnectionPool.getConnection(ConnectionPool.java:174) ~[org.apache.tomcat.jdbc_1.1.0.1.jar:na]
+        [java] 	at org.apache.tomcat.jdbc.pool.DataSourceProxy.getConnection(DataSourceProxy.java:124) ~[org.apache.tomcat.jdbc_1.1.0.1.jar:na]
+        [java] 	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:111) ~[org.springframework.jdbc_3.0.5.RELEASE.jar:3.0.5.RELEASE]
+        [java] 	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:77) ~[org.springframework.jdbc_3.0.5.RELEASE.jar:3.0.5.RELEASE]
+        [java] 	... 11 common frames omitted
+        [java] Caused by: java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+        [java] 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1073) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3609) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3541) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:943) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.MysqlIO.secureAuth411(MysqlIO.java:4113) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1308) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2336) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:2176) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	... 32 common frames omitted
+        [java] 15:13:50, ERROR,  , d.c.o.d.internal.DBAssistent - Client 'teamcrm2' was NOT processed completly!
+        [java] 15:13:50, INFO,  , d.c.o.d.internal.DBAssistent - ##################################################################################################################
+        [java] 15:13:50, INFO,  , d.c.o.d.internal.DBAssistent - ##################################################################################################################
+        [java] 15:13:50, INFO,  , d.c.o.d.internal.DBAssistent - ##################################################################################################################
+        [java] 15:13:50, INFO,  , d.c.o.d.internal.DBAssistent - Processing client #5 'teamCRM3'.
+        [java] 15:13:50, INFO,  , d.c.o.d.AbstractDatabaseTask - ########################################################################
+        [java] 15:13:50, INFO,  , d.c.o.d.AbstractDatabaseTask - Executing task: CheckProductTask on client teamCRM3
+        [java] 15:13:54, ERROR,  , d.c.o.d.internal.DBAssistent - Fatal error while processing client 'teamCRM3'. Continuing with next client. Error:
+        [java] org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+        [java] 	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:80) ~[org.springframework.jdbc_3.0.5.RELEASE.jar:3.0.5.RELEASE]
+        [java] 	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:572) ~[org.springframework.jdbc_3.0.5.RELEASE.jar:3.0.5.RELEASE]
+        [java] 	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:636) ~[org.springframework.jdbc_3.0.5.RELEASE.jar:3.0.5.RELEASE]
+        [java] 	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:665) ~[org.springframework.jdbc_3.0.5.RELEASE.jar:3.0.5.RELEASE]
+        [java] 	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:673) ~[org.springframework.jdbc_3.0.5.RELEASE.jar:3.0.5.RELEASE]
+        [java] 	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:728) ~[org.springframework.jdbc_3.0.5.RELEASE.jar:3.0.5.RELEASE]
+        [java] 	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:748) ~[org.springframework.jdbc_3.0.5.RELEASE.jar:3.0.5.RELEASE]
+        [java] 	at de.cas.open.dbassistent.internal.CheckProductTask.getPreviousProduct(CheckProductTask.java:181) ~[de.cas.open.dbassistent_1.0.0.v20140704-1337.jar:na]
+        [java] 	at de.cas.open.dbassistent.internal.CheckProductTask.executeOnClientSchemaInternal(CheckProductTask.java:95) ~[de.cas.open.dbassistent_1.0.0.v20140704-1337.jar:na]
+        [java] 	at de.cas.open.dbassistent.AbstractDatabaseTask.executeOnClientSchema(AbstractDatabaseTask.java:76) ~[de.cas.open.dbassistent_1.0.0.v20140704-1337.jar:na]
+        [java] 	at de.cas.open.dbassistent.internal.DBAssistent.run(DBAssistent.java:352) [de.cas.open.dbassistent_1.0.0.v20140704-1337.jar:na]
+        [java] 	at de.cas.open.dbassistent.internal.DBAssistent.main(DBAssistent.java:301) [de.cas.open.dbassistent_1.0.0.v20140704-1337.jar:na]
+        [java] Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+        [java] 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_20]
+        [java] 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source) ~[na:1.8.0_20]
+        [java] 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source) ~[na:1.8.0_20]
+        [java] 	at java.lang.reflect.Constructor.newInstance(Unknown Source) ~[na:1.8.0_20]
+        [java] 	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.Util.getInstance(Util.java:386) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1013) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:987) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:982) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:927) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:2237) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2158) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:792) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_20]
+        [java] 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source) ~[na:1.8.0_20]
+        [java] 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source) ~[na:1.8.0_20]
+        [java] 	at java.lang.reflect.Constructor.newInstance(Unknown Source) ~[na:1.8.0_20]
+        [java] 	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:381) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:305) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.jdbc2.optional.MysqlDataSource.getConnection(MysqlDataSource.java:440) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.jdbc2.optional.MysqlDataSource.getConnection(MysqlDataSource.java:138) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.jdbc2.optional.MysqlDataSource.getConnection(MysqlDataSource.java:108) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at org.apache.tomcat.jdbc.pool.PooledConnection.connectUsingDataSource(PooledConnection.java:219) ~[org.apache.tomcat.jdbc_1.1.0.1.jar:na]
+        [java] 	at org.apache.tomcat.jdbc.pool.PooledConnection.connect(PooledConnection.java:174) ~[org.apache.tomcat.jdbc_1.1.0.1.jar:na]
+        [java] 	at org.apache.tomcat.jdbc.pool.ConnectionPool.createConnection(ConnectionPool.java:660) ~[org.apache.tomcat.jdbc_1.1.0.1.jar:na]
+        [java] 	at org.apache.tomcat.jdbc.pool.ConnectionPool.borrowConnection(ConnectionPool.java:602) ~[org.apache.tomcat.jdbc_1.1.0.1.jar:na]
+        [java] 	at org.apache.tomcat.jdbc.pool.ConnectionPool.getConnection(ConnectionPool.java:174) ~[org.apache.tomcat.jdbc_1.1.0.1.jar:na]
+        [java] 	at org.apache.tomcat.jdbc.pool.DataSourceProxy.getConnection(DataSourceProxy.java:124) ~[org.apache.tomcat.jdbc_1.1.0.1.jar:na]
+        [java] 	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:111) ~[org.springframework.jdbc_3.0.5.RELEASE.jar:3.0.5.RELEASE]
+        [java] 	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:77) ~[org.springframework.jdbc_3.0.5.RELEASE.jar:3.0.5.RELEASE]
+        [java] 	... 11 common frames omitted
+        [java] Caused by: java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+        [java] 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1073) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3609) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3541) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:943) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.MysqlIO.secureAuth411(MysqlIO.java:4113) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1308) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2336) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	at com.mysql.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:2176) ~[com.mysql.jdbc_5.1.18.jar:na]
+        [java] 	... 32 common frames omitted
+        [java] 15:13:54, ERROR,  , d.c.o.d.internal.DBAssistent - Client 'teamCRM3' was NOT processed completly!
+        [java] 15:13:54, INFO,  , d.c.o.d.internal.DBAssistent - DBAssistent: Done.
+        [java] 15:13:54, ERROR,  , d.c.o.d.internal.DBAssistent - ##################################################################################################################
+        [java] 15:13:54, ERROR,  , d.c.o.d.internal.DBAssistent - ##################################################################################################################
+        [java] 15:13:54, ERROR,  , d.c.o.d.internal.DBAssistent - ##################################################################################################################
+        [java] 15:13:54, ERROR,  , d.c.o.d.internal.DBAssistent - Errors occurred while updating your database:
+        [java] 15:13:54, ERROR,  , d.c.o.d.internal.DBAssistent - --------------------------------------------------------------------
+        [java] 15:13:54, ERROR,  , d.c.o.d.internal.DBAssistent - Fatal error while processing client 'democlient'. Continuing with next client. Error: org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+        [java] 15:13:54, ERROR,  , d.c.o.d.internal.DBAssistent - Client 'democlient' was NOT processed completly!
+        [java] 15:13:54, ERROR,  , d.c.o.d.internal.DBAssistent - Fatal error while processing client 'leerermandant'. Continuing with next client. Error: org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+        [java] 15:13:54, ERROR,  , d.c.o.d.internal.DBAssistent - Client 'leerermandant' was NOT processed completly!
+        [java] 15:13:54, ERROR,  , d.c.o.d.internal.DBAssistent - Fatal error while processing client 'sandbox'. Continuing with next client. Error: org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+        [java] 15:13:54, ERROR,  , d.c.o.d.internal.DBAssistent - Client 'sandbox' was NOT processed completly!
+        [java] 15:13:54, ERROR,  , d.c.o.d.internal.DBAssistent - Fatal error while processing client 'teamcrm1'. Continuing with next client. Error: org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+        [java] 15:13:54, ERROR,  , d.c.o.d.internal.DBAssistent - Client 'teamcrm1' was NOT processed completly!
+        [java] 15:13:54, ERROR,  , d.c.o.d.internal.DBAssistent - Fatal error while processing client 'teamcrm2'. Continuing with next client. Error: org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+        [java] 15:13:54, ERROR,  , d.c.o.d.internal.DBAssistent - Client 'teamcrm2' was NOT processed completly!
+        [java] 15:13:54, ERROR,  , d.c.o.d.internal.DBAssistent - Fatal error while processing client 'teamCRM3'. Continuing with next client. Error: org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+        [java] 15:13:54, ERROR,  , d.c.o.d.internal.DBAssistent - Client 'teamCRM3' was NOT processed completly!
+        [java] 15:13:54, ERROR,  , d.c.o.d.internal.DBAssistent - --------------------------------------------------------------------
+        [java] 15:13:54, INFO,  , d.c.o.d.internal.DBAssistent -             ,---.
+        [java] 15:13:54, INFO,  , d.c.o.d.internal.DBAssistent -             ,.'-.   \
+        [java] 15:13:54, INFO,  , d.c.o.d.internal.DBAssistent -            ( ( ,'"""""-.
+        [java] 15:13:54, INFO,  , d.c.o.d.internal.DBAssistent -            `,X          `.
+        [java] 15:13:54, INFO,  , d.c.o.d.internal.DBAssistent -            /` `           `._
+        [java] 15:13:54, INFO,  , d.c.o.d.internal.DBAssistent -           (            ,   ,_\
+        [java] 15:13:54, INFO,  , d.c.o.d.internal.DBAssistent -           |          ,---.,'o `.
+        [java] 15:13:54, INFO,  , d.c.o.d.internal.DBAssistent -           |         / o   \     )
+        [java] 15:13:54, INFO,  , d.c.o.d.internal.DBAssistent -            \ ,.    (      .____,
+        [java] 15:13:54, INFO,  , d.c.o.d.internal.DBAssistent -             \| \    \____,'     \
+        [java] 15:13:54, INFO,  , d.c.o.d.internal.DBAssistent -           '`'\  \        _,____,'
+        [java] 15:13:54, INFO,  , d.c.o.d.internal.DBAssistent -           \  ,--      ,-'     \
+        [java] 15:13:54, INFO,  , d.c.o.d.internal.DBAssistent -             ( C     ,'         \
+        [java] 15:13:54, INFO,  , d.c.o.d.internal.DBAssistent -              `--'  .'           |
+        [java] 15:13:54, INFO,  , d.c.o.d.internal.DBAssistent -                |   |         .O |
+        [java] 15:13:54, INFO,  , d.c.o.d.internal.DBAssistent -              __|    \        ,-'_
+        [java] 15:13:54, INFO,  , d.c.o.d.internal.DBAssistent -             / `L     `._  _,'  ' `.
+        [java] 15:13:54, INFO,  , d.c.o.d.internal.DBAssistent -            /    `--.._  `',.   _\  `
+        [java] 15:13:54, INFO,  , d.c.o.d.internal.DBAssistent -            `-.       /\  | `. ( ,\  \
+        [java] 15:13:54, INFO,  , d.c.o.d.internal.DBAssistent -           _/  `-._  /  \ |--'  (     \
+        [java] 15:13:54, INFO,  , d.c.o.d.internal.DBAssistent -          '  `-.   `'    \/\`.   `.    )
+        [java] 15:13:54, INFO,  , d.c.o.d.internal.DBAssistent -                \  -hrr-    \ `.  |    |
+        [java] 15:13:54, INFO,  , d.c.o.d.internal.DBAssistent - Execution of DBA took 0.4651061608166667 min.

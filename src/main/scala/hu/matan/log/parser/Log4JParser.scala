@@ -9,7 +9,11 @@ http://www.donroby.com/wp/scala/parsing-expressions-with-scala-parser-combinator
 
 object Log4JParser extends RegexParsers {
 
-  def log4JLine = logLine | exceptionLine | stackTraceLine
+  override protected val whiteSpace = """[ \t]+""".r
+
+  def fileContent = repsep(logLine | exceptionLine | stackTraceLine | commonFramesOmitted, endOfLine)
+
+  def endOfLine = "\r\n" | "\n"
 
   def logLine = channel ~ time ~ "," ~ category ~ "," ~ ".*".r ^^ {
     case ch ~ ti ~ comma1 ~ ca ~ comma2 ~ rest => LogLine(ch, ti, ca, rest)
@@ -50,6 +54,13 @@ object Log4JParser extends RegexParsers {
   }
 
 
+  /**
+   * Example input: "        [java] \t... 32 common frames omitted"
+   */
+  def commonFramesOmitted = channel ~ "..." ~ """\d+""".r <~ "common frames omitted" ^^{
+    case ch ~ dots ~ num => CommonFramesOmitted(num.toInt)
+  }
+  
   def pcm: Parser[Pcm] = repsep( """\w+""".r, ".") ^^ {
     case list: List[String] => Pcm(
       `package` = list.dropRight(2).mkString("."),
@@ -72,11 +83,16 @@ object Log4JParser extends RegexParsers {
   def channel: Parser[String] = "[" ~> "\\w+".r <~ "]"
 
   def time: Parser[String] = "[\\w:]+".r
-
+  
   def category: Parser[String] = "\\w+".r
 
 
-  def parse(source: String): Log4JLine = parseAll(log4JLine, source) match {
+  def parse(source: String): List[Log4JLine] = parseAll(fileContent, source) match {
+    case Success(expression, _) => expression
+    case f: NoSuccess => throw new IllegalArgumentException(f.msg)
+  }
+
+  def parse(source: java.io.Reader): List[Log4JLine] = parseAll(fileContent, source) match {
     case Success(expression, _) => expression
     case f: NoSuccess => throw new IllegalArgumentException(f.msg)
   }
@@ -93,3 +109,5 @@ case class LogLine(channel: String, time: String, category: String, rest: String
 case class ExceptionLine(channel: String, exceptionClass: String, message: String, isCause: Boolean) extends Log4JLine
 
 case class StackTraceLine(channel: String, `package`: String, `class`: String, `method`: String, file: String, line: Long, jar: Option[String]) extends Log4JLine
+
+case class CommonFramesOmitted(number: Int) extends Log4JLine

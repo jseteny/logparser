@@ -2,7 +2,9 @@
   <dictionary name="jse">
     <words>
       <w>combinators</w>
+      <w>datasource</w>
       <w>jdbc</w>
+      <w>springframework</w>
     </words>
   </dictionary>
 </component>
