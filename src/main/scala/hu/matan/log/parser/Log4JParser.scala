@@ -75,7 +75,7 @@ object Log4JParser extends RegexParsers {
     case num: String => num.toLong
   }
 
-  def jar: Parser[String] = "~" ~> "[" ~> """[\w\._\:]+""".r <~ "]"
+  def jar: Parser[String] = "~" ~> "[" ~> """[\w\._-\:]+""".r <~ "]"
 
 
   def exceptionClass: Parser[String] = """[\w\.]+""".r
@@ -94,7 +94,9 @@ object Log4JParser extends RegexParsers {
 
   def parse(source: java.io.Reader): List[Log4JLine] = parseAll(fileContent, source) match {
     case Success(expression, _) => expression
-    case f: NoSuccess => throw new IllegalArgumentException(f.msg)
+    case NoSuccess(err, next) => throw new IllegalArgumentException( "failed to parse " +
+                    "(line " + next.pos.line + ", column " + next.pos.column + "):\n" + 
+                    err + "\n" + next.pos.longString  )
   }
 }
 
