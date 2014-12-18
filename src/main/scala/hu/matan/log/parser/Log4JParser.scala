@@ -75,7 +75,7 @@ object Log4JParser extends RegexParsers {
     case num: String => num.toLong
   }
 
-  def jar: Parser[String] = "~" ~> "[" ~> """[\w\._-\:]+""".r <~ "]"
+  def jar: Parser[String] = "~" ~> "[" ~> """[\w\._\-\:]+""".r <~ "]"
 
 
   def exceptionClass: Parser[String] = """[\w\.]+""".r
