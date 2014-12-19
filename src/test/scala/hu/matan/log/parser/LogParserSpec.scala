@@ -1,7 +1,5 @@
 package hu.matan.log.parser
 
-import java.io.Reader
-
 import org.specs2.mutable._
 
 import scala.io.Source
@@ -131,5 +129,33 @@ class LogParserSpec extends Specification {
       val result = Log4JParser.parse(input)
 
       result.size must be_==(0)
+    })
+
+  """[de.cas.open.dbassistent_1.0.0.v20140704-1337.jar:na]""" should (
+    "be parsed as jar(de.cas.open.dbassistent_1.0.0.v20140704-1337.jar:na)" in {
+
+      val input = "[de.cas.open.dbassistent_1.0.0.v20140704-1337.jar:na]"
+
+      val result = Log4JParser.parseChunk(Log4JParser.jar, input)
+
+      result must be_==("de.cas.open.dbassistent_1.0.0.v20140704-1337.jar:na")
+    })
+
+  """sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)""" should (
+    """be parsed as pcm(
+      |          `package` = "sun.reflect",
+      |          `class` = "NativeConstructorAccessorImpl",
+      |          `method` = "newInstance0(Native Method)",
+      |        ))""".stripMargin in {
+
+      val input = "sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)"
+
+      val result = Log4JParser.parseChunk(Log4JParser.pcm, input)
+
+      result must be_==(Pcm(
+        `package` = "sun.reflect",
+        `class` = "NativeConstructorAccessorImpl",
+        `method` = "newInstance0(Native Method)"
+      ))
     })
 }

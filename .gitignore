@@ -1,4 +1,9 @@
 /project/project/target/
 /project/target/
 *.class
-*.cache
+
+# nano editor can produce these
+*.save
+*.save.1
+*.save.2
+*.save.3

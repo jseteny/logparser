@@ -27,7 +27,7 @@ object Log4JParser extends RegexParsers {
    * </pre>
    */
   def exceptionLine = channel ~ opt("Caused" ~ "by:") ~ exceptionClass ~ ": " ~ ".*".r ^^ {
-    case ch ~ causedBy ~ ec ~ colon ~ msg => ExceptionLine(ch, ec, msg, causedBy!= None)
+    case ch ~ causedBy ~ ec ~ colon ~ msg => ExceptionLine(ch, ec, msg, causedBy != None)
   }
 
   /**
@@ -57,17 +57,24 @@ object Log4JParser extends RegexParsers {
   /**
    * Example input: "        [java] \t... 32 common frames omitted"
    */
-  def commonFramesOmitted = channel ~ "..." ~ """\d+""".r <~ "common frames omitted" ^^{
+  def commonFramesOmitted = channel ~ "..." ~ """\d+""".r <~ "common frames omitted" ^^ {
     case ch ~ dots ~ num => CommonFramesOmitted(num.toInt)
   }
-  
-  def pcm: Parser[Pcm] = repsep( """\w+""".r, ".") ^^ {
-    case list: List[String] => Pcm(
+
+  def pcm: Parser[Pcm] = repsep( """\w+""".r, ".") ~ opt(nativeOrUnknown) ^^ {
+    case list ~ None => Pcm(
       `package` = list.dropRight(2).mkString("."),
       `class` = list.reverse.tail.head,
       `method` = list.reverse.head
     )
+    case list ~ Some(nu ~ ms) => Pcm(
+      `package` = list.dropRight(2).mkString("."),
+      `class` = list.reverse.tail.head,
+      `method` = list.reverse.head + nu + " " + ms
+    )
   }
+
+  def nativeOrUnknown = ("(Native" ~ "Method)") | ("(Unknown" ~ " Source)")
 
   def file: Parser[String] = """\w+\.?\w*""".r
 
@@ -75,7 +82,7 @@ object Log4JParser extends RegexParsers {
     case num: String => num.toLong
   }
 
-  def jar: Parser[String] = "~" ~> "[" ~> """[\w\._\-\:]+""".r <~ "]"
+  def jar: Parser[String] = opt("~") ~> "[" ~> """[\w\._\-\:]+""".r <~ "]"
 
 
   def exceptionClass: Parser[String] = """[\w\.]+""".r
@@ -83,7 +90,7 @@ object Log4JParser extends RegexParsers {
   def channel: Parser[String] = "[" ~> "\\w+".r <~ "]"
 
   def time: Parser[String] = "[\\w:]+".r
-  
+
   def category: Parser[String] = "\\w+".r
 
 
@@ -94,10 +101,16 @@ object Log4JParser extends RegexParsers {
 
   def parse(source: java.io.Reader): List[Log4JLine] = parseAll(fileContent, source) match {
     case Success(expression, _) => expression
-    case NoSuccess(err, next) => throw new IllegalArgumentException( "failed to parse " +
-                    "(line " + next.pos.line + ", column " + next.pos.column + "):\n" + 
-                    err + "\n" + next.pos.longString  )
+    case NoSuccess(err, next) => throw new IllegalArgumentException("failed to parse " +
+      "(line " + next.pos.line + ", column " + next.pos.column + "):\n" +
+      err + "\n" + next.pos.longString)
   }
+
+  def parseChunk[T](p: Parser[T], in: java.lang.CharSequence): T = parseAll(p, in) match {
+    case Success(expression, _) => expression
+    case f: NoSuccess => throw new IllegalArgumentException(f.msg)
+  }
+
 }
 
 
