@@ -48,9 +48,8 @@ object Log4JParser extends RegexParsers {
         )
       </pre>
    */
-  def stackTraceLine = channel ~ "at" ~ pcm ~ "(" ~ file ~ ":" ~ line ~ ")" ~ opt(jar) ^^ {
-    case ch ~ at ~ pcm ~ openBrace ~ file ~ colon ~ line ~ closeBrace ~ jar
-    => StackTraceLine(ch, pcm.`package`, pcm.`class`, pcm.`method`, file, line, jar)
+  def stackTraceLine = channel ~ "at" ~ pcmfl ~ opt(jar) ^^ {
+    case ch ~ at ~ pcmfl ~ jar => StackTraceLine(ch, pcmfl, jar)
   }
 
 
@@ -61,20 +60,41 @@ object Log4JParser extends RegexParsers {
     case ch ~ dots ~ num => CommonFramesOmitted(num.toInt)
   }
 
-  def pcm: Parser[Pcm] = repsep( """\w+""".r, ".") ~ opt(nativeOrUnknown) ^^ {
-    case list ~ None => Pcm(
+  def pcmfl: Parser[Pcmfl] = repsep( """\w+""".r, ".") ~ (fileLine | fileOrNativeOrUnknown) ^^ {
+    case list ~ (_fileLine: (String, Long)) => Pcmfl(
       `package` = list.dropRight(2).mkString("."),
       `class` = list.reverse.tail.head,
-      `method` = list.reverse.head
+      method = list.reverse.head,
+      file = Some(_fileLine._1),
+      line = Some(_fileLine._2),
+      isNative = false,
+      isUnknownSource = false
     )
-    case list ~ Some(nu ~ ms) => Pcm(
+    case list ~ "(Native Method)" => Pcmfl(
       `package` = list.dropRight(2).mkString("."),
       `class` = list.reverse.tail.head,
-      `method` = list.reverse.head + nu + " " + ms
+      method = list.reverse.head,
+      file = None,
+      line = None,
+      isNative = true,
+      isUnknownSource = false
+    )
+    case list ~ "(Unknown Source)" => Pcmfl(
+      `package` = list.dropRight(2).mkString("."),
+      `class` = list.reverse.tail.head,
+      method = list.reverse.head,
+      file = None,
+      line = None,
+      isNative = false,
+      isUnknownSource = true
     )
   }
 
-  def nativeOrUnknown = ("(Native" ~ "Method)") | ("(Unknown" ~ " Source)")
+  def fileOrNativeOrUnknown = "(Native Method)" | "(Unknown Source)"
+
+  def fileLine: Parser[(String, Long)] = "(" ~> file ~ ":" ~ line <~ ")" ^^ {
+    case f ~ colon ~ l => (f, l)
+  }
 
   def file: Parser[String] = """\w+\.?\w*""".r
 
@@ -114,7 +134,7 @@ object Log4JParser extends RegexParsers {
 }
 
 
-case class Pcm(`package`: String, `class`: String, `method`: String)
+case class Pcmfl(`package`: String, `class`: String, method: String, file: Option[String], line: Option[Long], isNative: Boolean, isUnknownSource: Boolean)
 
 
 sealed trait Log4JLine
@@ -123,6 +143,6 @@ case class LogLine(channel: String, time: String, category: String, rest: String
 
 case class ExceptionLine(channel: String, exceptionClass: String, message: String, isCause: Boolean) extends Log4JLine
 
-case class StackTraceLine(channel: String, `package`: String, `class`: String, `method`: String, file: String, line: Long, jar: Option[String]) extends Log4JLine
+case class StackTraceLine(channel: String, pcmfl: Pcmfl, jar: Option[String]) extends Log4JLine
 
 case class CommonFramesOmitted(number: Int) extends Log4JLine

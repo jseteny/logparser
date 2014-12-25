@@ -60,25 +60,33 @@ class LogParserSpec extends Specification {
 
   "        [java] \tat org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:80) ~[org.springframework.jdbc_3.0.5.RELEASE.jar:3.0.5.RELEASE]" should (
     """be parsed as List(StackTraceLine(
-      |          channel = "java",
+      |        channel = "java",
+      |        Pcmfl(
       |          `package` = "org.springframework.jdbc.datasource",
       |          `class` = "DataSourceUtils",
-      |          `method` = "getConnection",
-      |          file = "DataSourceUtils.java",
-      |          line = 80,
-      |          jar = Some("org.springframework.jdbc_3.0.5.RELEASE.jar:3.0.5.RELEASE")
-      |        ))""".stripMargin in {
+      |          method = "getConnection",
+      |          file = Some("DataSourceUtils.java"),
+      |          line = Some(80),
+      |          isNative = false,
+      |          isUnknownSource = false
+      |        ),
+      |        jar = Some("org.springframework.jdbc_3.0.5.RELEASE.jar:3.0.5.RELEASE")
+      |      ))""".stripMargin in {
 
       val input = "        [java] \tat org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:80) ~[org.springframework.jdbc_3.0.5.RELEASE.jar:3.0.5.RELEASE]"
       val result = Log4JParser.parse(input)
 
       result must be_===(List(StackTraceLine(
         channel = "java",
-        `package` = "org.springframework.jdbc.datasource",
-        `class` = "DataSourceUtils",
-        `method` = "getConnection",
-        file = "DataSourceUtils.java",
-        line = 80,
+        Pcmfl(
+          `package` = "org.springframework.jdbc.datasource",
+          `class` = "DataSourceUtils",
+          method = "getConnection",
+          file = Some("DataSourceUtils.java"),
+          line = Some(80),
+          isNative = false,
+          isUnknownSource = false
+        ),
         jar = Some("org.springframework.jdbc_3.0.5.RELEASE.jar:3.0.5.RELEASE")
       )))
     })
@@ -101,11 +109,15 @@ class LogParserSpec extends Specification {
         ),
         StackTraceLine(
           channel = "java",
-          `package` = "org.springframework.jdbc.datasource",
-          `class` = "DataSourceUtils",
-          `method` = "getConnection",
-          file = "DataSourceUtils.java",
-          line = 80,
+          Pcmfl(
+            `package` = "org.springframework.jdbc.datasource",
+            `class` = "DataSourceUtils",
+            method = "getConnection",
+            file = Some("DataSourceUtils.java"),
+            line = Some(80),
+            isNative = false,
+            isUnknownSource = false
+          ),
           jar = Some("org.springframework.jdbc_3.0.5.RELEASE.jar:3.0.5.RELEASE")
         )
       ))
@@ -142,20 +154,64 @@ class LogParserSpec extends Specification {
     })
 
   """sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)""" should (
-    """be parsed as pcm(
+    """be parsed as Pcmfl(
       |          `package` = "sun.reflect",
       |          `class` = "NativeConstructorAccessorImpl",
-      |          `method` = "newInstance0(Native Method)",
-      |        ))""".stripMargin in {
+      |          method = "newInstance0",
+      |          file = None,
+      |          line = None,
+      |          isNative = true,
+      |          isUnknownSource = false
+      |       ))""".stripMargin in {
 
       val input = "sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)"
 
-      val result = Log4JParser.parseChunk(Log4JParser.pcm, input)
+      val result = Log4JParser.parseChunk(Log4JParser.pcmfl, input)
 
-      result must be_==(Pcm(
+      result must be_==(Pcmfl(
         `package` = "sun.reflect",
         `class` = "NativeConstructorAccessorImpl",
-        `method` = "newInstance0(Native Method)"
+        method = "newInstance0",
+        file = None,
+        line = None,
+        isNative = true,
+        isUnknownSource = false
+      ))
+    })
+
+  """(Native Method)""" should (
+    """be parsed as 'Native Method'""" in {
+
+      val input = "(Native Method)"
+
+      val result = Log4JParser.parseChunk(Log4JParser.fileOrNativeOrUnknown, input)
+
+      result must be_==("(Native Method)")
+    })
+
+  """org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:572)""" should (
+    """be parsed as Pcmfl(
+      |        `package` = "org.springframework.jdbc.core",
+      |        `class` = "JdbcTemplate",
+      |        method = "execute",
+      |        file = Some("JdbcTemplate.java"),
+      |        line = Some(572),
+      |        isNative = false,
+      |        isUnknownSource = false
+      |      )""".stripMargin in {
+
+      val input = "org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:572)"
+
+      val result = Log4JParser.parseChunk(Log4JParser.pcmfl, input)
+
+      result must be_==(Pcmfl(
+        `package` = "org.springframework.jdbc.core",
+        `class` = "JdbcTemplate",
+        method = "execute",
+        file = Some("JdbcTemplate.java"),
+        line = Some(572),
+        isNative = false,
+        isUnknownSource = false
       ))
     })
 }
