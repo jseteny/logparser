@@ -11,7 +11,11 @@ object Log4JParser extends RegexParsers {
 
   override protected val whiteSpace = """[ \t]+""".r
 
-  def fileContent = repsep(logLine | exceptionLine | stackTraceLine | commonFramesOmitted, endOfLine)
+  def fileContent = repsep(logLine | exceptionLine | stackTraceLine | commonFramesOmitted | emptyLine, endOfLine)
+
+  def emptyLine = "" ^^ {
+    case _ => EmptyLine()
+  }
 
   def endOfLine = "\r\n" | "\n"
 
@@ -60,7 +64,7 @@ object Log4JParser extends RegexParsers {
     case ch ~ dots ~ num => CommonFramesOmitted(num.toInt)
   }
 
-  def pcmfl: Parser[Pcmfl] = repsep( """\w+""".r, ".") ~ (fileLine | fileOrNativeOrUnknown) ^^ {
+  def pcmfl: Parser[Pcmfl] = repsep( """[<>\w]+""".r, ".") ~ (fileLine | fileOrNativeOrUnknown) ^^ {
     case list ~ (_fileLine: (String, Long)) => Pcmfl(
       `package` = list.dropRight(2).mkString("."),
       `class` = list.reverse.tail.head,
@@ -146,3 +150,5 @@ case class ExceptionLine(channel: String, exceptionClass: String, message: Strin
 case class StackTraceLine(channel: String, pcmfl: Pcmfl, jar: Option[String]) extends Log4JLine
 
 case class CommonFramesOmitted(number: Int) extends Log4JLine
+
+case class EmptyLine() extends Log4JLine

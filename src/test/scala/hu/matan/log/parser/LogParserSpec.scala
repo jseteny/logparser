@@ -136,11 +136,12 @@ class LogParserSpec extends Specification {
   """The "mixed log4j and ant.log" file""" should (
     "be parsed" in {
 
-      val input = Source.fromFile("src/test/resources/truncated mixed log4j and ant.log").bufferedReader()
+      val input = Source.fromFile("src/test/resources/mixed log4j and ant.log").bufferedReader()
 
       val result = Log4JParser.parse(input)
 
-      result.size must be_==(0)
+      val inputReadAgain = Source.fromFile("src/test/resources/truncated mixed log4j and ant.log").bufferedReader()
+      result.count((line: Log4JLine) => !line.isInstanceOf[EmptyLine]) must be_==(inputReadAgain.lines().count())
     })
 
   """[de.cas.open.dbassistent_1.0.0.v20140704-1337.jar:na]""" should (
