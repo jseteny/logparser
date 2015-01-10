@@ -11,7 +11,11 @@ object Log4JParser extends RegexParsers {
 
   override protected val whiteSpace = """[ \t]+""".r
 
-  def fileContent = repsep(logLine | exceptionLine | stackTraceLine | commonFramesOmitted |echo | emptyLine, endOfLine)
+  def fileContent = repsep(antPhase | logLine | exceptionLine | stackTraceLine | commonFramesOmitted | echo | emptyLine, endOfLine)
+
+  def antPhase = """\w+:""".r ^^ {
+    case phase => AntPhase(phase.dropRight(1))
+  }
 
   def emptyLine = "" ^^ {
     case _ => EmptyLine()
@@ -64,8 +68,8 @@ object Log4JParser extends RegexParsers {
     case ch ~ dots ~ num => CommonFramesOmitted(num.toInt)
   }
 
-  def echo = "[echo]" ~ rep("""[\w]+""".r ~ "=" ~ """[\w]""".r) ^^ {
-    case eh ~ List(id ~ eq ~ value) => EchoProperties
+  def echo = "[echo]" ~ rep( """[\w\.]+""".r ~ "=" ~ """[\w:\\~\./]+""".r) ^^ {
+    case eh ~ list => EchoProperties(list.map { value => (value._1._1, value._2)})
   }
 
   def pcmfl: Parser[Pcmfl] = repsep( """[<>\w]+""".r, ".") ~ (fileLine | fileOrNativeOrUnknown) ^^ {
@@ -147,6 +151,8 @@ case class Pcmfl(`package`: String, `class`: String, method: String, file: Optio
 
 sealed trait Log4JLine
 
+case class AntPhase(name: String) extends Log4JLine
+
 case class LogLine(channel: String, time: String, category: String, rest: String) extends Log4JLine
 
 case class ExceptionLine(channel: String, exceptionClass: String, message: String, isCause: Boolean) extends Log4JLine
@@ -159,4 +165,4 @@ case class EmptyLine() extends Log4JLine
 
 class EchoLine extends Log4JLine
 
-case class EchoProperties extends EchoLine
+case class EchoProperties(propertyList: List[(String, String)]) extends EchoLine

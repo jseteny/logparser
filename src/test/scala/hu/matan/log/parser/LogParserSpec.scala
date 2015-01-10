@@ -133,17 +133,6 @@ class LogParserSpec extends Specification {
       result must be_===(List(CommonFramesOmitted(32)))
     })
 
-  """The "mixed log4j and ant.log" file""" should (
-    "be parsed" in {
-
-      val input = Source.fromFile("src/test/resources/mixed log4j and ant.log").bufferedReader()
-
-      val result = Log4JParser.parse(input)
-
-      val inputReadAgain = Source.fromFile("src/test/resources/truncated mixed log4j and ant.log").bufferedReader()
-      result.count((line: Log4JLine) => !line.isInstanceOf[EmptyLine]) must be_==(inputReadAgain.lines().count())
-    })
-
   """[de.cas.open.dbassistent_1.0.0.v20140704-1337.jar:na]""" should (
     "be parsed as jar(de.cas.open.dbassistent_1.0.0.v20140704-1337.jar:na)" in {
 
@@ -214,5 +203,36 @@ class LogParserSpec extends Specification {
         isNative = false,
         isUnknownSource = false
       ))
+    })
+
+  """        [echo] tmpdir=C:\Users\JANOS~1.SET\AppData\Local\Temp\  casopen.serverbuild.tmp=C:\Users\JANOS~1.SET\AppData\Local\Temp\/casopenbuild """ should (
+    """be parsed as List(EchoProperties(
+      |        List(
+      |          ("tmpdir","C:\\Users\\JANOS~1.SET\\AppData\\Local\\Temp\\"),
+      |          ("casopen.serverbuild.tmp","C:\\Users\\JANOS~1.SET\\AppData\\Local\\Temp\\/casopenbuild")
+      |        )
+      |      ))""".stripMargin in {
+
+      val input = """        [echo] tmpdir=C:\Users\JANOS~1.SET\AppData\Local\Temp\  casopen.serverbuild.tmp=C:\Users\JANOS~1.SET\AppData\Local\Temp\/casopenbuild """
+
+      val result = Log4JParser.parse(input)
+
+      result must be_==(List(EchoProperties(
+        List(
+          ("tmpdir", "C:\\Users\\JANOS~1.SET\\AppData\\Local\\Temp\\"),
+          ("casopen.serverbuild.tmp", "C:\\Users\\JANOS~1.SET\\AppData\\Local\\Temp\\/casopenbuild")
+        )
+      )))
+    })
+
+  """The "mixed log4j and ant.log" file""" should (
+    "be parsed" in {
+
+      val input = Source.fromFile("src/test/resources/mixed log4j and ant.log").bufferedReader()
+
+      val result = Log4JParser.parse(input)
+
+      val inputReadAgain = Source.fromFile("src/test/resources/truncated mixed log4j and ant.log").bufferedReader()
+      result.count((line: Log4JLine) => !line.isInstanceOf[EmptyLine]) must be_==(inputReadAgain.lines().count())
     })
 }
