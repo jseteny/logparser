@@ -68,9 +68,26 @@ object Log4JParser extends RegexParsers {
     case ch ~ dots ~ num => CommonFramesOmitted(num.toInt)
   }
 
-  def echo = "[echo]" ~ rep( """[\w\.]+""".r ~ "=" ~ """[\w:\\~\./]+""".r) ^^ {
+  def echo = echoProperties | echoIn
+
+  /**
+   * [echo] Updating DB dumps in: C:\prjFAST\EclipseWorkspaces\GfzWS\Gfz\Server\de.cas.open.gfz.server.core.resources
+        [echo] Creating dump of leerermandant to C:\prjFAST\EclipseWorkspaces\GfzWS\Gfz\Server\de.cas.open.gfz.server.core.resources/resources/emptyclient.sql
+   */
+  def echoIn = "[echo]" ~> ".*".r ~ "in" ~ opt(":") ~ fileOrDir ^^ {
+    case what ~ in ~ colon ~ fileOrDir => EchoIn(what, fileOrDir)
+  }
+
+  def echoProperties = "[echo]" ~ rep( """[\w\.]+""".r ~ "=" ~ """[\w:\\~\./]+""".r) ^^ {
     case eh ~ list => EchoProperties(list.map { value => (value._1._1, value._2)})
   }
+
+  def fileOrDir = windowsFileOrDir
+
+  /**
+   * http://stackoverflow.com/questions/6730009/validate-a-file-name-on-windows
+   */
+  def windowsFileOrDir = """"^(?!(COM[0-9]|LPT[0-9]|CON|PRN|AUX|CLOCK\$|NUL)$)[^./\\:*?\"<>|]+$"""".r
 
   def pcmfl: Parser[Pcmfl] = repsep( """[<>\w]+""".r, ".") ~ (fileLine | fileOrNativeOrUnknown) ^^ {
     case list ~ (_fileLine: (String, Long)) => Pcmfl(
@@ -166,3 +183,5 @@ case class EmptyLine() extends Log4JLine
 class EchoLine extends Log4JLine
 
 case class EchoProperties(propertyList: List[(String, String)]) extends EchoLine
+
+case class EchoIn(what: String, where: String) extends EchoLine

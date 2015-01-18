@@ -232,7 +232,7 @@ class LogParserSpec extends Specification {
 
       val result = Log4JParser.parse(input)
 
-      val inputReadAgain = Source.fromFile("src/test/resources/truncated mixed log4j and ant.log").bufferedReader()
-      result.count((line: Log4JLine) => !line.isInstanceOf[EmptyLine]) must be_==(inputReadAgain.lines().count())
+      val inputReadAgain = Source.fromFile("src/test/resources/truncated mixed log4j and ant.log").iter
+      result.count(!_.isInstanceOf[EmptyLine]) must be_==(inputReadAgain.length)
     })
 }
