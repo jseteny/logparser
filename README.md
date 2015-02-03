@@ -1,6 +1,8 @@
 # logparser
 Log parser in Scala for ant build results, log4j and logback
 
+Please see https://codeship.com/projects/60759 for continous integration.
+
 ```scala
 val input = " [java] 15:13:29, INFO, , d.c.o.d.internal.DBAssistent - Processing global schema 'globalschema'."
 val result = Log4JParser.parse(input)
